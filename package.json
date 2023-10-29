@@ -1,0 +1,25 @@
+{
+  "name": "full-stack-challenge-cart",
+  "version": "1.0.0",
+  "description": "This is fullstack app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm start",
+    "server": "cd server && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KhalidMansoor0310/full-stack-challenge-cart.git"
+  },
+  "author": "khalid mansoor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KhalidMansoor0310/full-stack-challenge-cart/issues"
+  },
+  "homepage": "https://github.com/KhalidMansoor0310/full-stack-challenge-cart#readme",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
