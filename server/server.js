@@ -14,13 +14,14 @@ app.use(cookieParser());
 app.use("/api/items", require("./routes/item"));
 app.use("/uploads", express.static("uploads"));
 
-mongoose.connect(
-  db_connect,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  () => {
-    console.log("Connected to the database");
-  }
-);
+mongoose
+  .connect(db_connect, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((error) => {
+    console.error("Error connecting to MongoDB:", error);
+  });
 
 app.listen(5000, () => {
   console.log(`Server is running on port ${5000}`);
